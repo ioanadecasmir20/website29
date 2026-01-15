@@ -1,0 +1,221 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Westfield International College</title>
+  <meta name="description" content="Westfield International College — About us and enquiry form." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header" role="banner">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="Westfield International College home">
+        <!-- Put your logo in /images/logo.png (or change the src). -->
+        <img class="brand__logo" src="images/logo.png" alt="Westfield International College logo" />
+        <span class="brand__name">Westfield International College</span>
+      </a>
+
+      <div class="nav__links">
+        <a href="#about">About</a>
+        <a href="#enquiry">Enquire</a>
+        <a class="nav__cta" href="mailto:info@westfieldinternationalcollege.com">Email us</a>
+      </div>
+
+      <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="badge">International Education • Professional Learning</p>
+          <h1>Building futures through quality education and support.</h1>
+          <p class="lead">
+            Westfield International College offers learner-focused programmes with high standards,
+            clear guidance, and a supportive student experience.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#enquiry">Make an enquiry</a>
+            <a class="btn btn--ghost" href="#about">Learn more</a>
+          </div>
+
+          <div class="hero__contact">
+            <span class="muted">Email:</span>
+            <a href="mailto:info@westfieldinternationalcollege.com">info@westfieldinternationalcollege.com</a>
+          </div>
+        </div>
+
+        <div class="hero__card" aria-hidden="true">
+          <div class="hero__cardInner">
+            <h2>Why Westfield?</h2>
+            <ul>
+              <li>Supportive learning environment</li>
+              <li>Professional and academic pathways</li>
+              <li>Clear progression and guidance</li>
+              <li>Student-first approach</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__wave" aria-hidden="true"></div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__header">
+          <h2>About us</h2>
+          <p class="section__sub">
+            We help learners succeed with a structured approach, high expectations, and practical support.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Our mission</h3>
+            <p>
+              To provide accessible, high-quality education and training that helps learners develop
+              the skills, knowledge, and confidence to progress.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Our approach</h3>
+            <p>
+              We focus on clear learning outcomes, consistent support, and a professional learning
+              environment that encourages achievement.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Student support</h3>
+            <p>
+              From enquiries to enrolment and beyond, we aim to offer straightforward guidance
+              and timely communication.
+            </p>
+          </article>
+        </div>
+
+        <div class="note">
+          <p>
+            Want to know more? Email us at
+            <a href="mailto:info@westfieldinternationalcollege.com">info@westfieldinternationalcollege.com</a>
+            or use the enquiry form below.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="enquiry">
+      <div class="container">
+        <div class="section__header">
+          <h2>Enquiry form</h2>
+          <p class="section__sub">
+            Send us a message and we’ll get back to you as soon as possible.
+          </p>
+        </div>
+
+        <div class="formWrap">
+          <form id="enquiryForm" class="form" novalidate>
+            <div class="field">
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required minlength="2" />
+              <small class="error" data-error-for="name"></small>
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+              <small class="error" data-error-for="email"></small>
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone (optional)</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" />
+            </div>
+
+            <div class="field">
+              <label for="subject">Subject</label>
+              <input id="subject" name="subject" type="text" required minlength="3" />
+              <small class="error" data-error-for="subject"></small>
+            </div>
+
+            <div class="field field--full">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" required minlength="10"></textarea>
+              <small class="error" data-error-for="message"></small>
+            </div>
+
+            <div class="form__actions">
+              <button class="btn btn--primary" type="submit">Send enquiry</button>
+              <button class="btn btn--ghost" type="reset">Clear</button>
+            </div>
+
+            <p class="form__hint">
+              This form opens your email app to send the message to
+              <strong>info@westfieldinternationalcollege.com</strong>.
+            </p>
+
+            <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+          </form>
+
+          <aside class="sideCard">
+            <h3>Contact</h3>
+            <p class="muted">Email</p>
+            <p><a href="mailto:info@westfieldinternationalcollege.com">info@westfieldinternationalcollege.com</a></p>
+
+            <hr />
+
+            <h3>Office hours</h3>
+            <p class="muted">Mon–Fri</p>
+            <p>09:00 – 17:00</p>
+
+            <p class="muted" style="margin-top:14px;">Response time</p>
+            <p>Typically within 1–2 working days</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__grid">
+      <div>
+        <div class="footer__brand">
+          <img src="images/logo.png" alt="" aria-hidden="true" />
+          <span>Westfield International College</span>
+        </div>
+        <p class="muted">
+          For enquiries: <a href="mailto:info@westfieldinternationalcollege.com">info@westfieldinternationalcollege.com</a>
+        </p>
+      </div>
+
+      <div class="footer__links">
+        <a href="#about">About</a>
+        <a href="#enquiry">Enquire</a>
+        <a href="#top">Back to top</a>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p class="muted">© <span id="year"></span> Westfield International College. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
